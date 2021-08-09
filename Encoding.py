@@ -10,7 +10,7 @@ if __name__ == '__main__':
     argParser = argparse.ArgumentParser()
 
     argParser.add_argument("-f", "--file", default='',
-                           help="The wcs file which we want to parse")
+                           help="The logic program file which we want to encode")
     argParser.add_argument("-o", "--observation", default='',
                            help="The observation that we want to explain")
     argParser.add_argument("-p", "--supported", default='Y',

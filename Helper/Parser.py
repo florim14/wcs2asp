@@ -72,10 +72,10 @@ def execute_encoding(filePath, observation, supported, semantics):
 
 
 def filename_separator(filePath):
-    if filePath.endswith(".wcs"):
-        return filePath.split(".wcs")[0]
+    if filePath.endswith(".lp"):
+        return filePath.split(".lp")[0]
     else:
-        raise IOError('Please provide an appropriate file. The file should be a .wcs file!')
+        raise IOError('Please provide an appropriate file. The file should be a .lp file!')
 
 
 def non_blank_and_non_comment_lines(file):
