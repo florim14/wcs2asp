@@ -23,7 +23,7 @@ def read_solution_without_abducibles(solutionFilePath):
     readSolutionFile.close()
 
 
-def read_solution_with_abducibles(self, solutionFilePath):
+def read_solution_with_abducibles(solutionFilePath):
     readSolutionFile = open(solutionFilePath, 'r')
     lines = readSolutionFile.readlines()
     nextLineSolution = False
@@ -31,7 +31,7 @@ def read_solution_with_abducibles(self, solutionFilePath):
 
     for line in lines:
         if nextLineSolution:
-            literals = [literal.replace("true(", "").replace("false(", "").replace(")", "").strip()
+            literals = [literal.replace("true(", "").replace("false(", "-").replace(")", "").strip()
                         for literal in line.split(' ')]
             setOfAllSolution.append(literals)
             nextLineSolution = False
@@ -41,6 +41,7 @@ def read_solution_with_abducibles(self, solutionFilePath):
             print("\nThe formula is UNSATISFIABLE")
             break
     readSolutionFile.close()
+    print(setOfAllSolution)
     return setOfAllSolution
 
 
