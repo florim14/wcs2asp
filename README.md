@@ -20,6 +20,10 @@ or when we use the encoding for the K semantics [**optional**].
 used for the abduction case, and it is the parameter that we want to reason
 to [**optional**, but **required** for the abduction case].
 
+>To add a negative literal, we write the classical negation with a `-` sign.
+> For example if we want to add the negative atom of the atom `l`,
+> we do with the following option `-r="-l"`.
+
 After we run the script, it will generate a ```.lp``` file, which then
 will be executed with respect to the type of problem that we want to solve.
 The problem that we want to solve is encoded with respect to the mode, from
